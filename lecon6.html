@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 6 : Les Topologies - NetAcademy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Net<span>Academy</span></div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Présentation</a></li>
+                <li><a href="lecon1.html" class="active">Leçons</a></li>
+                <li><a href="exercices.html">Exercices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="lesson-header">
+            <h1>Leçon 6 : Les Topologies de Réseau</h1>
+            <p>La topologie définit la manière dont les équipements sont interconnectés, que ce soit physiquement ou logiquement.</p>
+        </section>
+
+        <section class="content">
+            <div class="div-info">
+                <h2>Qu'est-ce qu'une topologie ?</h2>
+                <p>C'est le plan d'architecture du réseau. Le choix d'une topologie influence la performance, le coût et la fiabilité du réseau.</p>
+            </div>
+
+            
+
+[Image of network topology diagrams including star, bus, ring, and mesh]
+
+
+            <div class="card">
+                <h3>1. La Topologie en Étoile</h3>
+                <p>C'est la plus courante. Tous les ordinateurs sont reliés à un équipement central (le <strong>Switch</strong>). 
+                <br><em>Avantage :</em> Si un câble tombe en panne, le reste du réseau continue de fonctionner.</p>
+            </div>
+
+            <div class="card">
+                <h3>2. La Topologie en Bus</h3>
+                <p>Toutes les stations sont connectées à un seul câble central (le bus). 
+                <br><em>Inconvénient :</em> Si le câble principal est coupé, tout le réseau est paralysé.</p>
+            </div>
+
+            <div class="card">
+                <h3>3. La Topologie Maillée (Mesh)</h3>
+                <p>Chaque nœud est relié à plusieurs autres nœuds. C'est la structure utilisée pour <strong>Internet</strong>.
+                <br><em>Avantage :</em> Une fiabilité extrême grâce aux chemins redondants.</p>
+            </div>
+
+            
+
+            <div class="important-note">
+                <h3>Résumé technique</h3>
+                <ul>
+                    <li><strong>Physique :</strong> La disposition réelle des câbles.</li>
+                    <li><strong>Logique :</strong> La façon dont les données circulent réellement.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation-lecons">
+            <a href="lecon5.html" class="btn" style="background: #95a5a6;">&larr; Leçon 5 (Matériel)</a>
+            <span>Page 6 / 8</span>
+            <a href="lecon7.html" class="btn">Leçon 7 (Supports) &rarr;</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetAcademy - Architecture Réseau</p>
+    </footer>
+
+</body>
+</html>

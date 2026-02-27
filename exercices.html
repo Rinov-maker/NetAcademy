@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Final - NetAcademy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="favicon.png">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Net<span>Academy</span></div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Présentation</a></li>
+                <li><a href="lecon1.html">Leçons</a></li>
+                <li><a href="exercices.html" class="active">Exercices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="quiz-header">
+            <h1>Quiz Récapitulatif</h1>
+            <p>Ce test couvre l'ensemble des 8 leçons du cours. Bonne chance !</p>
+        </section>
+
+        <section class="quiz-box">
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. Quelle couche du modèle OSI s'occupe du routage des paquets ?</p>
+                    <input type="radio" name="q1" value="0"> Couche 2 (Liaison)<br>
+                    <input type="radio" name="q1" value="1"> Couche 3 (Réseau)<br>
+                    <input type="radio" name="q1" value="0"> Couche 4 (Transport)
+                </div>
+
+                <div class="question">
+                    <p>2. Combien de couches comporte le modèle TCP/IP ?</p>
+                    <input type="radio" name="q2" value="0"> 7 couches<br>
+                    <input type="radio" name="q2" value="1"> 4 couches<br>
+                    <input type="radio" name="q2" value="0"> 5 couches
+                </div>
+
+                <div class="question">
+                    <p>3. Laquelle de ces adresses est une adresse IPv4 valide ?</p>
+                    <input type="radio" name="q3" value="1"> 192.168.1.50<br>
+                    <input type="radio" name="q3" value="0"> 172.16.256.1<br>
+                    <input type="radio" name="q3" value="0"> 2001:0db8:85a3...
+                </div>
+
+                <div class="question">
+                    <p>4. Quel équipement utilise les adresses MAC pour diriger les données dans un LAN ?</p>
+                    <input type="radio" name="q4" value="0"> Le Routeur<br>
+                    <input type="radio" name="q4" value="1"> Le Switch<br>
+                    <input type="radio" name="q4" value="0"> Le Hub
+                </div>
+
+                <div class="question">
+                    <p>5. Dans quelle topologie tous les nœuds sont reliés à un point central ?</p>
+                    <input type="radio" name="q5" value="0"> Bus<br>
+                    <input type="radio" name="q5" value="1"> Étoile<br>
+                    <input type="radio" name="q5" value="0"> Maille
+                </div>
+
+                <div class="question">
+                    <p>6. Quel support de transmission utilise la lumière pour transporter les données ?</p>
+                    <input type="radio" name="q6" value="0"> Câble RJ45<br>
+                    <input type="radio" name="q6" value="1"> Fibre Optique<br>
+                    <input type="radio" name="q6" value="0"> Wi-Fi
+                </div>
+
+                <div class="question">
+                    <p>7. Quel dispositif filtre le trafic entrant et sortant d'un réseau ?</p>
+                    <input type="radio" name="q7" value="1"> Un Pare-feu (Firewall)<br>
+                    <input type="radio" name="q7" value="0"> Un Switch<br>
+                    <input type="radio" name="q7" value="0"> Un Modem
+                </div>
+
+                <div class="question">
+                    <p>8. Quel protocole est utilisé pour naviguer sur le Web de manière sécurisée ?</p>
+                    <input type="radio" name="q8" value="0"> FTP<br>
+                    <input type="radio" name="q8" value="1"> HTTPS<br>
+                    <input type="radio" name="q8" value="0"> SMTP
+                </div>
+
+                <div class="center">
+                    <button type="button" class="btn-submit" onclick="calculerResultat()">Soumettre mes réponses</button>
+                </div>
+            </form>
+
+            <div id="resultDisplay" class="result-card" style="display:none;">
+                <h2 id="scoreText"></h2>
+                <p id="commentText"></p>
+                <button class="btn" onclick="location.reload()">Recommencer</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function calculerResultat() {
+            let score = 0;
+            const totalQuestions = 8;
+            const form = document.getElementById('quizForm');
+            const results = new FormData(form);
+
+            // Calcul du score basé sur les "value=1" pour les bonnes réponses
+            for (let value of results.values()) {
+                score += parseInt(value);
+            }
+
+            // Affichage de la boîte de résultat
+            const display = document.getElementById('resultDisplay');
+            const scoreText = document.getElementById('scoreText');
+            const commentText = document.getElementById('commentText');
+
+            display.style.display = "block";
+            form.style.display = "none"; // On cache le formulaire
+
+            scoreText.innerHTML = `Votre score : ${score} / ${totalQuestions}`;
+
+            if(score === totalQuestions) {
+                commentText.innerHTML = "🏆 Excellent ! Vous maîtrisez parfaitement les réseaux.";
+                display.style.backgroundColor = "#d4edda"; // Vert
+                display.style.color = "#155724";
+            } else if (score >= 5) {
+                commentText.innerHTML = "🥈 Très bien ! Vous avez de solides bases.";
+                display.style.backgroundColor = "#fff3cd"; // Jaune
+                display.style.color = "#856404";
+            } else {
+                commentText.innerHTML = "📚 Courage ! Relisez les leçons et réessayez.";
+                display.style.backgroundColor = "#f8d7da"; // Rouge
+                display.style.color = "#721c24";
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 NetAcademy - Évaluation Finale</p>
+    </footer>
+
+</body>
+</html>

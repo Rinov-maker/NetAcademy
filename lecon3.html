@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 3 : Le Modèle TCP/IP - NetAcademy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="favicon.png">
+ </head>
+ 
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Net<span>Academy</span></div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Présentation</a></li>
+                <li><a href="lecon1.html" class="active">Leçons</a></li>
+                <li><a href="exercices.html">Exercices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="lesson-header">
+            <h1>Leçon 3 : Le Modèle TCP/IP</h1>
+            <p>Découvrez le protocole réel qui fait fonctionner Internet aujourd'hui.</p>
+        </section>
+
+        <section class="content">
+            <div class="div-info">
+                <h2>Qu'est-ce que le TCP/IP ?</h2>
+                <p>Alors que le modèle OSI est un modèle de référence théorique, le modèle <strong>TCP/IP</strong> (Transmission Control Protocol/Internet Protocol) est l'architecture réelle utilisée pour toutes les communications sur le web.</p>
+            </div>
+
+            
+
+            <h3>Les 4 Couches du modèle TCP/IP</h3>
+            <p>Le TCP/IP simplifie le processus en regroupant certaines fonctions en 4 couches clés :</p>
+            
+            <table class="table-programme">
+                <thead>
+                    <tr>
+                        <th>N°</th>
+                        <th>Couche</th>
+                        <th>Protocoles associés</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Application</strong></td>
+                        <td><code>HTTP</code>, <code>HTTPS</code>, <code>FTP</code>, <code>DNS</code></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Transport</strong></td>
+                        <td><code>TCP</code> (Fiable) et <code>UDP</code> (Rapide)</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>Internet</strong></td>
+                        <td><code>IP</code> (Adressage), <code>ICMP</code> (Ping)</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>Accès Réseau</strong></td>
+                        <td>Ethernet, Wi-Fi, MAC</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="important-note">
+                <h3>Point Clé : TCP vs UDP</h3>
+                <ul>
+                    <li><strong>TCP :</strong> Garantit que les données arrivent sans erreur (utilisé pour le Web, Email).</li>
+                    <li><strong>UDP :</strong> Envoie les données sans vérifier la réception (utilisé pour le Streaming, Jeux vidéo).</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="navigation-lecons">
+            <a href="lecon2.html" class="btn" style="background: #95a5a6;">&larr; Leçon 2 (OSI)</a>
+            <span>Page 3 / 8</span>
+            <a href="lecon4.html" class="btn">Leçon 4 (IP) &rarr;</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetAcademy - Protocoles Web</p>
+    </footer>
+
+</body>
+</html>

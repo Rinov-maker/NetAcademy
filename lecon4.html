@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon 4 : L'Adressage IPv4 - NetAcademy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="png" href="favicon.png">
+</head> 
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Net<span>Academy</span></div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Présentation</a></li>
+                <li><a href="lecon1.html">Leçons</a></li>
+                <li><a href="exercices.html">Exercices</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="lesson-header">
+            <h1>Leçon 4 : Comprendre l'Adressage IPv4</h1>
+            <p>Apprenez comment les ordinateurs sont identifiés sur un réseau grâce aux adresses IP.</p>
+        </section>
+
+        <section class="content">
+            <div class="div-info">
+                <h2>Qu'est-ce qu'une adresse IP ?</h2>
+                <p>Une adresse IP (Internet Protocol) est un numéro d'identification unique attribué à chaque appareil connecté. En IPv4, elle se présente sous la forme de 4 nombres (octets) séparés par des points.</p>
+            </div>
+
+            
+
+            <div class="important-note">
+                <h3>Composition d'une adresse :</h3>
+                <p>Une adresse IPv4 est codée sur <strong>32 bits</strong>. Exemple : <code>192.168.1.10</code></p>
+                <ul>
+                    <li><strong>Partie Réseau :</strong> Identifie le groupe de machines.</li>
+                    <li><strong>Partie Hôte :</strong> Identifie la machine spécifique dans ce groupe.</li>
+                </ul>
+            </div>
+
+            <h3>Les Classes d'adresses principales :</h3>
+            <table class="table-programme">
+                <thead>
+                    <tr>
+                        <th>Classe</th>
+                        <th>Plage d'adresses</th>
+                        <th>Utilisation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Classe A</td><td>1.0.0.0 à 126.255.255.255</td><td>Très grands réseaux</td></tr>
+                    <tr><td>Classe B</td><td>128.0.0.0 à 191.255.255.255</td><td>Moyens réseaux</td></tr>
+                    <tr><td>Classe C</td><td>192.0.0.0 à 223.255.255.255</td><td>Petits réseaux (Local)</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="navigation-lecons">
+            <a href="lecon3.html" class="btn" style="background: #95a5a6;">&larr; Leçon Précédente</a>
+            <span>Page 4 / 8</span>
+            <a href="lecon5.html" class="btn">Leçon Suivante &rarr;</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 NetAcademy - Projet Éducatif</p>
+    </footer>
+
+</body>
+</html>
